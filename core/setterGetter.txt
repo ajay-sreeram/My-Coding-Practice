@@ -1,0 +1,28 @@
+Class cls=object.getClass();
+java.lang.reflect field[]=cls.getFields();
+List<String> mlist=new ArrayList<String>();
+for(i=0;i<mname.length;i++)
+mlist.add(field[i].getName());
+
+Collections.sort(mlist,new Comparator<String>(){
+public int compare(String s1,String s2){
+return s1.compareTo(s2);}});
+
+int i=0;
+int j=0;
+String bools[]=new String[count];
+String result="";
+for(String s:mlist)
+{
+for(i=0;i<field.length;i++)
+{
+if(s.equals(field[i].getName()))
+{
+if(field[i].getType().getName().equals("boolean"))
+result+="is"+s+"\n"+"set"+s+"\n";
+else
+result+="get"+s+"\n"+"set"+s+"\n";
+}
+}
+}
+return result;

@@ -1,0 +1,24 @@
+
+<!-- saved from url=(0180)https://stackauth.com/auth/global/read?request=y7CJ9qlsTHCSynPCc3GYT%2FWBxf0NaqkQPi4d%2FfMjcl9llAueEyBq%2Bssg8Du2WjF2jDEski9ujxxb7aVp6SEdcg%3D%3D&nonce=LN4GVAAAAACgfZNXHmP0Xw%3D%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <script>
+                  var data = {"ReadSession":"https://stackauth.com/auth/global/read-session","Request":"y7CJ9qlsTHCSynPCc3GYT/WBxf0NaqkQPi4d/fMjcl9llAueEyBq+ssg8Du2WjF2jDEski9ujxxb7aVp6SEdcg==","Nonce":"LN4GVAAAAACgfZNXHmP0Xw==","Referrer":"http://stackoverflow.com/questions/746082/how-to-find-list-of-possible-words-from-a-letter-matrix-boggle-solver","StorageName":"GlobalLogin"};
+
+                  var toMsg = window.parent;
+
+                  var obj = localStorage.getItem(data.StorageName);
+                  if(obj != null) {
+                  var req = new XMLHttpRequest();
+                  req.open('POST', data.ReadSession+'?request='+encodeURIComponent(data.Request)+'&nonce='+encodeURIComponent(data.Nonce)+'&seriesAndToken='+encodeURIComponent(obj), false);
+                  req.send(null);
+                  
+                    if(req.status == 200){
+                      toMsg.postMessage(req.responseText, data.Referrer);
+                    }else{
+                      toMsg.postMessage('No Session', data.Referrer);
+                    }
+                  }else{
+                    toMsg.postMessage('No Local Storage', data.Referrer);
+                  }
+                  </script>
+                  <style type="text/css"></style></head><body></body></html>

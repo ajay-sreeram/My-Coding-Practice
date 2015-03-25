@@ -1,0 +1,42 @@
+9th SENSE
+====================================
+Version 1.0.0 
+====================================
+Welcome to 9th sense platform..
+
+HOW TO PLAY!
+********************
+The Shabaaz will perform magic and real mindreading
+Nobody escapes from the Shabaaz's mind.
+Follow instructions ...
+
+Think of any number between 10 and 99.
+Add both digits together.For example,23 equals 5.
+Now subtract the total(i.e 5) from your original choice (i.e 23) 
+When you get the total,look up the number on Shabaaz's chart for its corresponding symbol or alphabet. 
+and focus on it(Symbol or alphabet)..atleast 10 seconds....concentrate...
+after finishing click the SHOW .you will beleive Shabaaz can see you...  
+
+
+Dont play with shabaaz chart by dragging it..its magical,its contents gets dissappeared...
+
+
+PC requirments
+*********************
+
+atleast
+	java jdk-4 or its prior..
+
+	
+ 	Operating System =  Microsoft Windows XP  2, XP 3, win 7 , win 8 ,8.1 preview and others..
+	Physical RAM     = 2MB
+	x86PType         =  Standard OEM
+
+ 
+ABOUT CREATOR
+************************
+SHABAAZ SHAIKZ..      
+
+
+
+THANKS! for visiting the app.         

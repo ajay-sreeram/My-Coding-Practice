@@ -1,0 +1,60 @@
+
+Write a program to get the youngest libran from the list of persons. 
+NOTE: While passing the month to the GregorianCalendar, it will start from 0 and go till 11. 
+Assume that the Libra range is [Sept 23–Oct 22]
+
+
+
+class IdentifyTheYoungestLibran 
+{ 
+    public static void main(String s[])
+    {
+        ArrayList list = new ArrayList();
+        list.add(new Person("Amir", new GregorianCalendar(1989, 5, 25)));
+        list.add(new Person("Rohith", new GregorianCalendar(1989, 9, 25)));
+        list.add(new Person("Rajini", new GregorianCalendar(1989, 9, 23)));
+        list.add(new Person("Krishna", new GregorianCalendar(1989, 10, 10)));
+        list.add(new Person("Jay", new GregorianCalendar(1989, 8, 23)));
+        list.add(new Person("Suma", new GregorianCalendar(1977, 9, 27)));
+        System.out.println("The youngest libran is " + getTheYoungestLibran(list));
+
+    }
+
+
+public static String getTheYoungestLibran(ArrayList<Person> input) { 
+List<Person> list=new ArrayList<Person>();
+int mnt,dt;
+for(Person p:input)
+{
+mnt=p.dateOfBirth.get(Calendar.MONTH);
+dt=p.dateOfBirth.get(Calendar.DATE);
+if(mnt==8)
+if(dt>=23)
+list.add(p);
+
+if(mnt==9)
+if(dt<=22)
+list.add(p);
+}
+
+Collections.sort(list,new Comparator<Person>(){
+public int compare(Person p1,Person p2){
+if(p1.dateOfBirth.before(p2.dateOfBirth))
+return 1;
+else
+return -1;}});
+Person result=(Person)list.get(0);
+return result.name;
+}
+}
+
+class Person { 
+ 
+String name; 
+Calendar dateOfBirth; 
+ 
+public Person(String name, Calendar dateOfBirth) { 
+this.name = name; 
+this.dateOfBirth = dateOfBirth; 
+} 
+}

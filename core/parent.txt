@@ -1,0 +1,1 @@
+if (root.name.equals(name)) { return null; } for (Person child : root.children) { if (getParent(child, name) != null) { return getParent(child, name); } if (child.name.equals(name)) { return root; } } return null; 

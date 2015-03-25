@@ -1,0 +1,4 @@
+
+Write a program to get the area of a quadrilateral. Points are given in anti clock wise direction starting from bottom left point.
+ANS:
+double result1 = (firstPoint.x - thirdPoint.x) * (secondPoint.y - fourthPoint.y); double result2 = (secondPoint.x - fourthPoint.x) * (firstPoint.y - thirdPoint.y); return ((result1 - result2) / 2); 

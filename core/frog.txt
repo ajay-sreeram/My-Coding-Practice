@@ -1,0 +1,63 @@
+//A frog can jump either one foot or two feet at once, given the distance between its resting place and the pond in feet, Write a program to get the number of ways in which the frog can reach the pond from its resting place.
+Input (int): 6
+Output(List): [111111, 11112, 11121, 11211, 12111, 21111, 1122, 1212, 1221, 2112, 2121, 2211, 222]
+
+class FindPossibleFrogJumps 
+{ 
+    public static void main(String s[])
+    {
+        List result = getPossibleJumps(6);
+        System.out.println("The possible jumps are: " + result);
+
+    }
+
+
+public static List<String> getPossibleJumps(int number) {
+List<String> result=new ArrayList<String>();
+int i;
+for(i=number;i>=1;i--)
+result.addAll(array(i,number));
+return result;
+}
+public static List<String> array(int size,int num)
+{
+	
+	int i,j,p,t,k;
+	int sum=0;
+	p=1;
+	List<String> list=new ArrayList<String>();
+	for(i=0;i<size;i++)
+	{
+		p*=2;
+	}
+        char a[][]=new char[p][size];
+	for(i=0;i<p;i++)
+	{
+		for (j=0;j<size;j++)
+			a[i][j]='1';
+		
+		j=size-1;
+		t=i;
+		while(t>0)
+		{
+			if(t%2==0)
+				a[i][j]='1';
+			else
+				a[i][j]='2';
+			t=t/2;
+			j--;
+		}
+	String temp=new String(a[i]);
+	sum=0;
+	for(k=0;k<temp.length();k++)
+	if(temp.charAt(k)=='1')
+	sum++;
+	else
+	sum+=2;
+	if(sum==num)
+	list.add(temp);	
+	}
+	
+return list;
+}
+}

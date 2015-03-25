@@ -1,0 +1,1 @@
+if (itemToMove != null && !itemToMove.equals("") && list != null && !list.isEmpty()){int index = list.indexOf(itemToMove);int swapIndex = index + increment;if (swapIndex >= 0 && swapIndex < list.size()){String previousItem = list.get(swapIndex);list.set(index, previousItem);list.set(swapIndex, itemToMove);}}

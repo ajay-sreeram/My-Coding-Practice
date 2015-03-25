@@ -1,0 +1,28 @@
+class CompleteSudokuPuzzle 
+{ 
+    public static void main(String s[])
+    {
+        int[][] sudoku = {{0, 0, 0, 2, 0, 0, 0, 6, 3}, {3, 0, 0, 0, 0, 5, 4, 0, 1}, {0, 0, 1, 0, 0, 3, 9, 8, 0}, {0, 0, 0, 0, 0, 0, 0, 9, 0}, {0, 0, 0, 5, 3, 8, 0, 0, 0}, {0, 3, 0, 0, 0, 0, 0, 0, 0}, {0, 2, 6, 3, 0, 0, 5, 0, 0}, {5, 0, 3, 7, 0, 0, 0, 0, 8}, {4, 7, 0, 0, 0, 1, 0, 0, 0}};
+        solveSudoku(sudoku);
+        for (int[] array1d : sudoku) {
+        for (int element : array1d) {
+        System.out.print(element + " ");
+        }
+        System.out.println();
+        }
+
+    }
+
+
+public static void solveSudoku(int[][] sudoku) { 
+No code written
+
+getSolvedSudoku(sudoku, 0, 0); 
+
+} 
+ 
+No code written
+
+public static boolean getSolvedSudoku(int[][] sudoku, int row, int column) { if (column > 8) { column = 0; row++; if (row > 8) return true; } if (sudoku[row][column] != 0) return getSolvedSudoku(sudoku, row, column + 1); for (int number = 1; number <= 9; number++) { if (checkValidity(sudoku, row, column, number)) { sudoku[row][column] = number; if (getSolvedSudoku(sudoku, row, column + 1)) return true; } } sudoku[row][column] = 0; return false; }  public static boolean checkValidity(int[][] sudoku, int row, int column, int number) { for (int i = 0; i < 9; i++) if (sudoku[i][column] == number) return false; for (int i = 0; i < 9; i++) if (sudoku[row][i] == number) return false; int gridrow = row - (row % 3); int gridcol = column - (column % 3); for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) if (sudoku[gridrow + i][gridcol + j] == number) return false; return true; }  
+
+}

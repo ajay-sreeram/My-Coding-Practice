@@ -1,0 +1,6 @@
+for (String key : destination.keySet())
+ { if (source.containsKey(key)) 
+{
+ destination.put(key, source.get(key)); 
+}
+ } 

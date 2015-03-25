@@ -1,0 +1,41 @@
+Check if the number is accepted at the given 2x3 sudoku position.	
+
+Write code here to check if the number is accepted at the given 2x3 sudoku position. 
+
+
+
+boolean found = false;
+ int rowIndex = sudokuPosition.rowPosition - 1;
+ int columnIndex = sudokuPosition.columnPosition - 1;
+ if (sudoku[rowIndex][columnIndex] == 0)
+ { 
+     for (int[] element : sudoku)
+     { 
+        if (element[columnIndex] == number) 
+         { found = true; break; }
+     } 
+       if (!found)
+     { 
+         for (int i = 0; i < sudoku[0].length; i++)
+          { 
+             if (sudoku[rowIndex][i] == number)
+                { found = true; break;
+                 } 
+          }
+      } 
+        if (!found) 
+        { int boxRow = rowIndex / 2;
+           int boxColumn = columnIndex / 3;
+            for (int i = 0; i < 2; i++)
+             {
+                 for (int j = 0; j < 3; j++)
+                     {
+                        if (sudoku[i + (boxRow * 2)][j + (boxColumn * 3)] == number) 
+                        { found = true; break; }
+                    } 
+            } 
+        }
+    } 
+   else 
+  { found = true; } 
+return !found; 

@@ -1,0 +1,9 @@
+try{
+Calendar cal = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("dd MMMMMMMMMM yyyy");
+    cal.setTime(sdf.parse(date));
+    SimpleDateFormat sd=new SimpleDateFormat("EEEEEEEE");
+result = sd.format(cal.getTime());
+}
+catch(Exception e)
+{return null;}

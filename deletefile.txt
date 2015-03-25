@@ -1,0 +1,83 @@
+//Deletes starts
+class Deletes extends Frame implements ActionListener,WindowListener
+{
+Button db;
+TextField dtf;
+Label dl;
+Files df;
+Save(Files p)
+{
+//addWindowListener(new MyAdapter1(this));
+setBackground(new Color(235,235,235));
+addWindowListener(this);
+setLocationRelativeTo(null);
+df=p;
+setLayout(null);
+this.setVisible(true);
+//this.setSize(250,190);
+this.setBounds(550,250,250,190);
+this.setTitle("Save");
+Button db=new Button("save");db.setBounds(100,120,55,30);
+dl=new Label("Enter name(with type) to save");dl.setBounds(47,45,165,20);
+dtf=new TextField(15);dtf.setBounds(55,80,145,25);
+//setLayout(new FlowLayout());
+add(dl);add(dtf);add(db);
+sb.addActionListener(this);
+}
+public void actionPerformed(ActionEvent ap)
+{
+if(dtf.getText().equals(""))
+{
+this.setVisible(false);
+try{Thread.sleep(150);}catch(InterruptedException ee){}
+this.setVisible(true);
+}
+else
+{
+df.name=dtf.getText();
+File af=new File(df.name);
+if(!af.exists())
+{
+	//sf.ta.setText("\t\t\tNO SUCH FILE EXIST EXISTS");
+	Frame ff=new Frame();
+	ff.setLayout(null);
+	ff.setBounds(550,250,250,150);
+	ff.setTitle("Error");
+	ff.setFont(new Font("arial",Font.ITALIC,20));
+	Label ss=new Label("NO SUCH A FILE EXISTS");ss.setBounds(15,65,215,20);
+	ff.add(ss);
+	ff.setVisible(true);
+	try{Thread.sleep(1000);}catch(InterruptedException ee){}
+	ff.setVisible(false);
+	
+}
+else
+{
+
+df.setTitle("Notepad");
+try{
+	
+	af.delete();
+	
+	df.ta.setText("");
+	}
+catch(IOException az){}
+}
+
+this.setVisible(false);
+}
+}
+public void windowClosing(WindowEvent e){this.setVisible(false);}
+public void windowClosed(WindowEvent e){}
+public void windowOpened(WindowEvent e){}
+public void windowActivated(WindowEvent e){}
+public void windowDeactivated(WindowEvent e){}
+public void windowIconified(WindowEvent e){}
+public void windowDeiconified(WindowEvent e){}
+public void paint(Graphics g)
+{
+g.setColor(new Color(170,170,170));
+for(int l=0;l<6;l++)
+g.drawRoundRect(20+l,35+l,210-2*l,140-2*l,20,20);
+}
+}

@@ -1,0 +1,820 @@
+ import java.io.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+
+/*<applet code="Shabaaz" width=1024 height =786></applet>*/
+public class Shabaaz extends Applet implements ActionListener,Runnable,MouseListener,MouseMotionListener
+{
+Mainpage mp;int i=0,j=0;int corner=1;int k=0;int jj=0;
+Button click,click1;Label l1,l2,l3,l4,l5; Button mag;
+String str;How hw;
+public char sym[ ]={'A','k','3','4','5','6','7','8','9'}; public int kk;
+String sp;
+Boolean flag=true;
+Boolean flag1=true;
+AudioClip audio,audio1;
+Image img,img1,img2;
+
+int hide=10;
+
+Chart chart;
+
+TextArea tf;
+
+Button exit;
+
+public void init()
+{
+
+
+audio1=getAudioClip(getCodeBase(),"crystal.wav");
+audio1.loop();
+
+
+
+File af=new File("a.txt");
+try{             FileReader fr=new FileReader("a.txt");
+	String ma="";
+	int ch=-1;
+	do
+	{	try{
+		ch=fr.read();
+		}
+	catch(NumberFormatException ap){}
+		if(ch!=-1)
+		ma=ma+(""+(char)ch);
+	}while(ch!=-1);
+	
+	kk=Integer.parseInt(ma); if(kk==49){kk=-1;}  kk+=1;
+	fr.close();
+}catch(IOException aoe){}
+
+Font f=new Font("Chiller",Font.BOLD,15);
+//setFont(f);
+
+addMouseMotionListener(this); 
+      chart=new Chart(kk);chart.setBounds(730,30,300,700);chart.setVisible(true);
+      mp=new Mainpage(kk); 
+
+
+
+exit=new Button("EXIT");exit.addActionListener(this);exit.setBounds(320,400,20,20);//add(exit);
+
+mp.setVisible(false);
+tf=new TextArea(10,10);tf.setText(" "+hide);//add(tf);
+img=getImage(getCodeBase(),"crystal.gif");
+img1=getImage(getCodeBase(),"black.gif");
+img2=getImage(getCodeBase(),"radar.gif");
+setBackground(Color.black);
+setLayout(null);
+click=new Button("Show");click.setBounds(400,20,230,20);click.addActionListener(this);
+click1=new Button("help"); click1.setBounds(400,520,230,20);click1.addActionListener(this);
+
+click.setBackground(Color.black);
+click.setForeground(Color.white);
+
+click1.setBackground(Color.black);
+click1.setForeground(Color.white); 
+
+
+add(click);
+//add(click1);
+
+/*File af=new File("a.txt");
+try{             FileReader fr=new FileReader("a.txt");
+	String ma="";
+	int ch=-1;
+	do
+	{	try{
+		ch=fr.read();
+		}
+	catch(NumberFormatException ap){}
+		if(ch!=-1)
+		ma=ma+(""+(char)ch);
+	}while(ch!=-1);
+	kk=Integer.parseInt(ma);
+	fr.close();
+}catch(IOException aoe){} */
+
+
+
+
+ //chart=new Chart(kk);chart.setBounds(730,30,300,700);chart.setVisible(true);
+ //mp=new Mainpage(kk); 
+
+//hw=new How();
+
+
+
+
+
+}
+
+
+
+
+
+public void actionPerformed(ActionEvent ae)
+{
+String str;
+int ii=10;
+str=ae.getActionCommand();
+
+/*if(str.equals("EXIT"));
+{
+tf.setText(""+kk);
+File af=new File("a.txt");
+try{
+	af.createNewFile();
+	FileWriter fw=new FileWriter("a.txt");
+	String strr=tf.getText();
+	int i=0,len;char sc='0';
+	len=strr.length();
+	while(i<len)
+	{
+	sc=strr.charAt(i);
+	fw.write(sc);i++;
+	}
+	fw.close();
+}
+catch(IOException aoe){}
+
+}
+
+*/
+
+
+ if(str.equals("help")){ hw=new How();}  
+
+ if(str.equals("Show"))
+{
+
+
+
+tf.setText(""+kk);
+File af=new File("a.txt");
+try{
+	af.createNewFile();
+	FileWriter fw=new FileWriter("a.txt");
+	String strr=tf.getText();
+	int i=0,len;char sc='0';
+	len=strr.length();
+	while(i<len)
+	{
+	sc=strr.charAt(i);
+	fw.write(sc);i++;
+	}
+	fw.close();
+}
+catch(IOException aoe){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mp=new Mainpage(kk);
+chart.setVisible(false);
+audio=getAudioClip(getCodeBase(),"talwar2.wav");
+audio.loop();
+for(int i=0;i<200;i+=10)
+{
+
+if(corner==1)
+{
+try{mp.setBounds(0+2*i-30,0+2*i,0+2*i-30,0+5+i);
+audio=getAudioClip(getCodeBase(),"talwar2.wav");
+mp.setVisible(true);
+Thread.sleep(20);}
+catch(InterruptedException e){ } 
+}
+
+if(corner==2)
+{
+try{mp.setBounds(1024-3*i+10,0+2*i,1024-4*i+60,0+5+i);
+audio=getAudioClip(getCodeBase(),"talwar2.wav");
+mp.setVisible(true);
+Thread.sleep(20);}
+catch(InterruptedException e){ } 
+}
+
+}
+
+
+corner++;
+if(corner==3)
+{corner=1;}
+
+
+                      }
+
+try
+{Thread.sleep(1000);}
+catch(InterruptedException e){}
+audio.stop();
+kk++;
+
+
+
+// if(str.equals("help")){ hw=new How();}  
+
+}
+
+
+
+
+public void start()
+{
+Thread t=new Thread (this);
+t.start();
+}
+public void run()
+{
+int i=10;
+while(flag)
+{
+
+try
+{
+Thread.sleep(100);
+}
+
+catch(InterruptedException e)
+{
+}
+
+if(i<310)
+{
+click1.setBounds(700-i,620,230,20);
+add(click1);
+}
+
+
+
+i+=10;
+repaint(); 
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+public void update(Graphics g)
+{
+g.drawImage(img,0,0,this);//k+=10;if(k==400){k=0;}
+g.drawImage(img1,20,20,this);
+g.drawImage(img2,25,450,this);
+//setFont(new Font("Arial",Font.BOLD,20));setForeground(Color.green);
+g.drawString("Shabaaz Crystal Gazing",450,500);setForeground(Color.green);
+//Button but=new //Button("SSSShow");but.setBackground(Color.green);but.setBounds(400,400,400,400);add(but);
+
+/*if(flag1){
+Font f=new Font("Arial",Font.BOLD,20);
+setFont(f);
+setForeground(Color.cyan);
+g.drawString(".",206+4*i,142);
+g.drawString(".",206-4*i,142);
+g.drawString(".",206,142+3*i);
+g.drawString(".",206,142-3*i);
+
+g.drawString(".",206+4*i,142+3*i);
+g.drawString(".",206-4*i,142-3*i);
+g.drawString(".",206+4*i,142-3*i);
+g.drawString(".",206-4*i,142+3*i);
+i+=10;
+if(i==100)
+{i=10;}                              flag1=false;          }
+else{
+setForeground(Color.green);
+g.drawString(".",768+4*j,567);
+g.drawString(".",796-4*j,567);
+g.drawString(".",768,567+3*j);
+g.drawString(".",768,567-3*j);
+
+g.drawString(".",768+4*j,567+3*j);
+g.drawString(".",768-4*j,567-3*j);
+g.drawString(".",768+4*j,567-3*j);
+g.drawString(".",768-4*j,567+3*j);
+j+=10;
+if(j==100)
+{j=10;}                                                     flag1=true;   }*/
+
+
+
+
+
+
+
+
+
+g.setFont(new Font("Serief",Font.ITALIC,60));
+g.setColor(new Color(180,195,147));
+
+if(flag1)
+{
+g.drawString("*",500,170);
+g.drawString("*",320,130);
+g.drawString("*",150,180);
+g.drawString("*",40,165);
+g.drawString("*",60,140);
+g.drawString("*",560,120);
+g.drawString("*",140,187);
+g.drawString("*",260,190);
+g.drawString("*",580,130);
+flag1=false;
+}
+else
+{
+g.drawString("*",512,55);
+g.drawString("*",582,160);
+g.drawString("*",540,230);
+g.drawString("*",600,258);
+g.drawString("*",620,289);
+//g.drawString("*",520,420);
+g.drawString("*",340,320);
+g.drawString("*",624,279);
+g.drawString("*",370,190);
+flag1=true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+public void mousePressed(MouseEvent me) {}
+public void mouseReleased(MouseEvent me) {}
+public void mouseClicked(MouseEvent me) {}
+public void mouseEntered(MouseEvent me)
+{
+click.setBackground(Color.black);
+click.setForeground(Color.white);
+click1.setBackground(Color.white);
+click1.setForeground(Color.black);
+}
+public void mouseExited(MouseEvent me)
+{
+
+click.setBackground(Color.black);
+click.setForeground(Color.white);
+click1.setBackground(Color.white);
+click1.setForeground(Color.black);
+}
+
+public void mouseMoved(MouseEvent me)
+
+{
+int mx,my;
+mx=me.getX();
+my=me.getY();
+showStatus("moving"+mx+","+my);
+
+if(mx>452&&mx<600&&my>6&&my<50)
+{
+Font ff=new Font("Arial",Font.BOLD,20);
+click.setFont(ff);
+click.setBackground(Color.red);
+click.setForeground(Color.black);
+}
+else
+{
+Font fff=new Font("Arial",Font.BOLD,15);
+click.setFont(fff);
+click.setBackground(Color.black);
+click.setForeground(Color.white);
+}
+
+}
+
+public void mouseDragged(MouseEvent me){}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Mainpage extends Frame implements ActionListener,WindowListener
+{
+Button bt;Chart chart;
+AudioClip audio;
+Image img;
+public char global[ ]={'A','Z','C','B','*','Z','%','S','U','$','F','^','E','@','!','F','k','Q','R','T','%','A','G','P','&','S','U','K','^','!','X','$','N','I','%','Z','#','F','U','V','+','~','Z','X','I','X','W','O','J','Z'   };
+int kk;
+Mainpage(int kk)
+{
+super("SHABAAZ can read your eyes and mind");
+
+
+
+
+this.kk=kk;
+Color c=new Color(110,120,90);
+setBackground(Color.black);
+setForeground(Color.red);
+setLayout(new BorderLayout());Panel p=new Panel();
+Font f=new Font("Chiller",Font.BOLD,20);
+setFont(f);
+bt=new Button("    Retake   ");bt.addActionListener(this);
+p.add(bt);
+bt.setBackground(Color.black);
+bt.setForeground(Color.orange);
+add(p,"South");
+}
+public void actionPerformed(ActionEvent ae)
+{
+String str=ae.getActionCommand();
+this.setVisible(false);
+
+chart=new Chart(kk+1);
+chart.setBounds(730,30,300,700);
+chart.setVisible(true);
+}
+public void paint(Graphics g)
+{
+//img=getImage(getCodeBase(),"tata.gif");
+g.drawString("hello..",500,390);
+//g.drawImage(img,30,30,this);
+Font ff=new Font("Algerian",Font.BOLD,80);g.setFont(ff);
+g.drawString(" "+global[kk],100,100);
+}
+public void windowOpened(WindowEvent e){}
+public void windowClosed(WindowEvent e)
+{
+this.setVisible(false);
+}
+public void windowClosing(WindowEvent e)
+{
+this.setVisible(false);
+}
+public void windowActivated(WindowEvent e){}
+public void windowDeactivated(WindowEvent e)
+{
+this.setVisible(false);
+}
+public void windowIconified(WindowEvent e){}
+public void windowDeiconified(WindowEvent e){}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Chart extends Frame
+{
+
+int shft=0; int chk=1;
+int x=240,y=690;
+int kk;int kkclone;
+public char global[ ]={'A','Z','C','B','*','Z','%','S','U','$','#','^','E','@','!','F','k','Q','R','T','%','A','G','P','&','S','U','K','^','!','X','$','N','I','%','Z','#','F','U','V','+','~','Z','X','I','X','W','O','~','Z'   };
+char globalas[ ]=new char[100];
+char global0[ ]={'B','F','C','B','*','Z','%','L','N','Q','R','J','+','P','X','A','&','F','C','$','D','S','Y','C','%','V','%','A','D','W','@','^','I','L','*','Z','%','G','P','L','D','!','@','R','D','G','^','J','E','P'};
+
+char global1[ ]={'M','P','@','O','D','A','D','B','@',      'E','H','!','I','X','$','#','B','I','%','F','L','N','A','^','+',             'L','B','E','#','I','N','S','!','T','D','L','P','H','Y','Z','F','%','H','V','&','D','P','X','A','^'};
+
+char global2[ ]={'S','^','F','P','Y','B','G','&','$',         '^','H','O','I','R','$','R','B','I','D','F','L','N','A','Z','@',           'F','C','O','T','I','D','S','N','Q','*','L','N','X','B','Z','F','Q','&','V','R','D','P','!','S','%'};
+
+char global3[ ]={'U','*','+','D','J','U','O','*','B',             'E','H','P','I','X','$','@','B','I','D','F','D','^','A','F','$',           'P','^','O','T','I','D','%','N','^','D','L','N','P','A','Z','&','!','H','V','R','D','P','+','M','T'};
+
+char global4[ ]={'Q','#','P','X','K','I','C','+','A',                   'E','^','O','I','%','$','#','@','I','D','F','L','B','A','N','@',         'F','*','O','T','*','D','S','N','Q','D','&','N','X','A','Z','F','Q','L','&','R','D','P','X','A','+'};
+
+
+
+char global5[ ]={'P','D','O','J','F',                   '0','@','R','L','A','D','B','#'               ,'Z','X','A','Y','C','U','I','H','W',                                      'L','Y','S','T','C','Z','&','E','F','S','&',                                   '#','U','%','N','F','E','Q','F','K','@','R','D','H','L','$','I','+'};
+
+
+char global6[ ]={'*','E','E','#','*',                'V','R','D','R','#','E','Z','A'                ,        'B','I','D','F','L','N','A','Z','@'             ,                   '!','D','V','B','C','H','A','M','P','$','H',                                  '%','E','@','H','D','E','P','X','D','E','R','D','B','+','$','I','K'};
+
+
+char global7[ ]={'%','C','W','+','!',             'R','-','J','@','o','N','Q','F'                  ,    '0','@','R','L','A','D','B','#','W',                                         'L','C','J','^','C','T','A','E','P','@', 'H',                              '#','C','%','N','^','E','P','A','D','@','B','D','H','F','$','I','K'};
+char global8[ ]={'R','Z','E','&','~',              'T','R','D','$','#','Z','P','Q'         ,              'P','D','O','J','F',             'U','X','F','W'     ,                      'O','@','N','E','C','Z','^','B','O','&','$',                                'P','^','X','N','D','E','%','A','D','O','R','D','H','F','$','I','K'};
+
+
+char global9[ ]={'$','N','G','@','R','D','B','#','E','D','A',            'E','P','D','!','$','V','R','N','A','$','D','$','#','L','A','W','L','%','J','$','A','Y','C','U','Z','#','G','$','E','P','%','E','P','X','Q','R','J','@','!'};
+
+Chart(int kk )
+{
+super("SHABAAZ CHART");
+setBackground(Color.black);
+setForeground(Color.yellow);
+
+if(kk==50)
+{
+kk=0;
+}
+
+this.kk=kk;
+this.kkclone=kk;
+
+this.setSize(500,500);
+this.setVisible(true);
+}
+
+
+
+
+
+public void paint(Graphics g)
+{
+Font f=new Font("Chiller",Font.BOLD,20);
+g.setFont(f);
+
+
+if(kk==10||kk==51||kk==28||kk==30||kk==45)
+{
+kkclone=1;
+}
+
+if(kk==12||kk==53||kk==27||kk==29||kk==46)
+{
+kkclone=2;
+}
+
+if(kk==11||kk==52||kk==26||kk==31||kk==44)
+{
+kkclone=3;
+}
+
+if(kk==48||kk==16||kk==25||kk==32||kk==42||kk==14)
+{
+kkclone=4;
+}
+
+if(kk==47||kk==15||kk==24||kk==34||kk==43)
+{
+kkclone=5;
+}
+
+if(kk==49||kk==17||kk==23||kk==35||kk==41||kk==13)
+{
+kkclone=6;
+}
+
+if(kk==50||kk==55||kk==22||kk==33||kk==38)
+{
+kkclone=7;
+}
+
+if(kk==19||kk==54||kk==21||kk==37||kk==39)
+{
+kkclone=8;
+}
+
+if(kk==20||kk==14||kk==56||kk==36||kk==40)
+{
+kkclone=9;
+}
+
+
+switch(kkclone)
+{
+case 0:	for(int i=0;i<global0.length;i++)   globalas[i] = global0[i];                                                  break;						
+case 1:     for(int i=0;i<global1.length;i++)   globalas[i] = global1[i];    			break;
+case 2:	for(int i=0;i<global2.length;i++)   globalas[i] = global2[i];			break;
+case 3:	for(int i=0;i<global3.length;i++)   globalas[i] = global3[i];			break;
+case 4:	for(int i=0;i<global4.length;i++)   globalas[i] = global4[i];			break;
+case 5:	for(int i=0;i<global5.length;i++)   globalas[i] = global5[i];			break;
+case 6:	for(int i=0;i<global6.length;i++)   globalas[i] = global6[i];			break;
+case 7:     for(int i=0;i<global7.length;i++)   globalas[i] = global7[i];			break;
+case 8:     for(int i=0;i<global8.length;i++)   globalas[i] = global8[i];			break; 
+case 9:     for(int i=0;i<global9.length;i++)   globalas[i] = global9[i];			break;
+}
+
+
+
+/*g.drawString("*100,100",100,100);
+g.drawString("*200,200",200,200);
+g.drawString("*300,300",300,300);
+g.drawString("*400,400",400,400);
+g.drawString("*500,500",500,500);*/
+
+
+for(int i=1;i<=20;i++)
+{
+if(i==9){globalas[i]=global[kk];}
+if(i==18){globalas[i]=global[kk];}
+g.drawString(" "+i+" "+ globalas[i],x,y);y-=34;
+}
+
+y=690;
+x-=50;
+
+for(int i=21;i<=40;i++)
+{
+if(i==27){globalas[i]=global[kk];}
+if(i==36){globalas[i]=global[kk];}
+g.drawString(" "+i+" "+ globalas[i],x,y);y-=34;
+}
+
+
+//similar..still write some for loops....
+
+y=690;
+x-=50;
+
+shft=41;
+for(int i=41;i<=60;i++)
+{
+if(shft==49){ shft = 20;}
+if(i==45){globalas[i]=global[kk];}
+if(i==54){globalas[i]=global[kk];}
+g.drawString(" "+i+" "+ globalas[shft],x,y);y-=34;
+shft++;
+}
+
+shft=10;
+y=690;
+x-=50;
+
+for(int i=61;i<=80;i++)
+{
+
+if(i==63){globalas[i]=global[kk];}
+if(i==72){globalas[i]=global[kk];}
+g.drawString(" "+i+" "+ globalas[shft],x,y);y-=34;
+shft++;
+}
+
+shft=40;
+y=690;
+x-=50;
+
+for(int i=81;i<=100;i++)
+{
+if(i==81){globalas[i]=global[kk];}
+if(i==90){globalas[i]=global[kk];}
+g.drawString(" "+i+" "+ globalas[shft],x,y);y-=34;
+shft--;
+}
+
+
+
+
+
+
+
+
+}//paint closing
+
+
+
+}//class closing
+
+
+
+
+class How extends Frame implements WindowListener,ActionListener
+{
+Image img;Button bt;
+int i=10;
+How( )
+{
+super("What to do....");
+setBackground(Color.black);setLayout(null);
+setForeground(Color.white);
+  Font f=new Font("Arial Black",Font.BOLD,10);setFont(f);
+  bt=new Button("ok");bt.addActionListener(this);
+bt.setBackground(Color.black);bt.setForeground(Color.red);
+bt.setBounds(650,180,80,50);add(bt);
+for(i=10;i<250;i+=10){
+try
+{
+//this.setBounds(200,200,650,250);
+this.setBounds(-100+i,200,740,250);
+this.setVisible(true);
+Thread.sleep(50);
+}
+
+catch(InterruptedException e)
+{
+}
+
+}
+
+//this.setSize(300,200);
+//this.setVisible(true);
+//img=getImage(getCodeBase(),"radar.gif"); 
+}
+
+public void actionPerformed(ActionEvent ae)
+{
+this.setVisible(false);
+}
+public void paint(Graphics g)
+{
+
+Font f=new Font("Chiller",Font.BOLD,20);
+g.setFont(f);
+//g.drawImage(img,100,100,this);
+g.drawString("The Shabaaz will perform magic and real mindreading",20,50);
+g.drawString("Nobody escapes from the Shabaaz's mind.",20,70);
+g.drawString("Follow instructions and...DO NOT BE AFRAID.",20,90);
+
+g.drawString("Think of any number between 10 and 99.",20,110    );
+g.drawString("Add both digits together.For example,23 equals 5.",20,130 );
+g.drawString("Now subtract the total(i.e 5) from your original choice (i.e 23) ",20,150);
+g.drawString("When you get the total,look up the number on Shabaaz's chart for its corresponding symbol or alphabet. ",20,170 );
+g.drawString("and focus on it(Symbol or alphabet)..atleast 10 seconds....concentrate... ",20,190);
+g.drawString("after finishing click the SHOW .you will beleive Shabaaz can see you...    ",20,210);     
+g.drawString("dont play with shabaaz chart by dragging it..its magical,it contents gets dissappeared...    ",20,230);                    
+               
+}
+
+
+
+
+public void windowOpened(WindowEvent e){}
+public void windowClosed(WindowEvent e){this.setVisible(false);}
+public void windowClosing(WindowEvent e)
+{
+this.setVisible(false);
+}
+public void windowActivated(WindowEvent e){}
+public void windowDeactivated(WindowEvent e){}
+public void windowIconified(WindowEvent e){}
+public void windowDeiconified(WindowEvent e){}
+
+
+}
+
+
+
+
+

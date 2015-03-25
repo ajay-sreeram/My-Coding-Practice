@@ -1,0 +1,1 @@
+int divisor = 0; int quotient = 0, dividend = 0; divisor = y * z; quotient = divisor / x; dividend = divisor * quotient + z; return "Dividend = " + dividend + ", " + "Divisor = " + divisor + ", " + "Quotient = " + quotient + ", " + "Remainder = " + z; 

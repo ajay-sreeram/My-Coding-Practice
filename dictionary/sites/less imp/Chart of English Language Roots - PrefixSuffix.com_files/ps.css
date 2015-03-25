@@ -1,0 +1,1111 @@
+
+* {
+	margin:0;
+	padding:0;
+} 
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 75%;
+	background:#4E4E4E;
+	color:#373737;
+	margin:0 0 20px 0;
+}
+
+body a {
+	color: #0284D4;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+body a:hover {
+	text-decoration: none;
+	color: #029DFB;
+}
+
+.error {
+	color:#990000;
+	font-weight:bold;
+}
+
+h1 a {
+	text-decoration:none;
+}
+
+h1 {
+	margin:0 0 0 -1px;
+	color:#333;
+	font-size:15px;
+	font-weight:bold;
+}
+
+h2 {
+	margin:0 0 10px 0;
+	color:#333;
+	font-size:13px;
+	font-weight:bold;
+}
+
+h3, h4, h5, p.subject {
+	color:#333;
+	font-size:12px;
+	font-weight:bold;
+	margin:0 0 8px 0;
+	padding:0 0 2px 0;
+}
+
+h3.dynamic {	
+	margin: 1px 0 10px 0;
+	line-height:145%;
+	font-size:12px;
+}
+
+table.affix {
+	border: 6px inset #8B8378;
+	-moz-border-radius: 6px;
+}
+table.affix td {
+	border-top: 1px solid black;
+	padding: 0.2em 2ex 0.2em 2ex;
+	color: black;
+}
+table.affix tr.ps0 td {
+	background-color: #FCF6CF;
+}
+table.affix tr.ps1 td {
+	background-color: #FEFEF2;
+}
+
+ul, li {
+	margin-left:10px;
+	line-height: 135%;
+}
+
+ul, ol {
+	padding-bottom:6px;
+}
+
+ol {
+	padding-left:24px;
+}
+
+p {
+	margin: 1px 0 10px 0;
+	line-height: 145%;
+}
+
+option {padding-right:4px;}
+
+/* FCKEditor */
+.FCKEditor_js_box {
+	margin:3px 0 0 0 ;
+	border: 1px solid #6699ff;
+}
+
+.mysuite_form {}
+
+.mysuite_form textarea {
+	width: 550px ;
+	margin-top:3px;
+	font-family:Arial, Helvetica, sans-serif ; 
+	font-size:12px;
+	border: 1px solid #6699ff;
+} 
+
+input.mysuite_form_ele {
+	margin-top:3px;
+	border: 1px solid #6699ff;
+	padding:1px 0 2px 0;
+}
+.mysuite_form .ele_long {
+	width:400px;
+}
+
+.mysuite_form select {
+	border: 1px solid #6699ff;
+}
+
+.note, .note_with_padding {
+	font-size:11px;
+}
+
+.note_with_padding {
+	padding-left:20px ;
+}
+
+a img {
+	border:none !important;
+}
+
+/* hacks - do not edit */
+.clearfix:after		{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix			{display: inline-table;}
+* HTML .clearfix	{height: 1%;}
+table 				{font-size: 1em;}
+/* end hacks */
+
+
+/* circular photo on the top of the article */
+
+.circlePhoto {
+	width:80px;
+	height:80px;
+	float:right;
+	margin:0 0 10px 10px;
+	display:inline; /* for double float bug */
+}
+
+.circleIconLime {
+	margin-top:14px;
+}
+
+/* this is for the H4 subject headline within each green heading */
+.subject, p.subject {	
+	padding:0;
+	margin:0;
+	font-size:12px;
+	position:relative;
+	top:47px;
+	left:63px;
+}
+
+/* entries on the topic pages - some with little icons */
+p.articleDate {
+/*	background:url(http://graphics.suite101.com/icon_article.gif) no-repeat 2px; 4px; */
+	padding:0 0 0 16px;
+	margin:0 0 0px 0;
+	font-style: italic;
+	
+}
+
+p.editorsChoice {
+/*	background:url(http://graphics.suite101.com/icon_editors_choice.gif) no-repeat -1px -1px; */
+	padding:0 0 0 16px;
+	margin:0 0 0 0;
+	font-style: italic;
+}
+
+p.pollDate {
+/*	background:url(http://graphics.suite101.com/icon_poll.gif) no-repeat 0 -2px; */
+	padding:0 0 0 16px;
+	margin:0 0 0px 0;
+	font-style: italic;
+}
+
+p.blogDate {
+/* 	background:url(http://graphics.suite101.com/icon_blog_date.gif) no-repeat 0 1px; */
+	padding:0 0 0 16px;
+	margin:0 0 0px 0;
+	font-style: italic;
+}
+
+p.discussionDate {
+/* 	background:url(http://graphics.suite101.com/icon_discuss.gif) no-repeat 0 1px; */
+	padding:0 0 0 16px;
+	margin:0 0 0px 0;
+	font-style: italic;
+}
+
+p.allBlogs {
+/*	background:url(http://graphics.suite101.com/icon_all_blogs.gif) no-repeat 0 3px; */
+	padding:2px 0 2px 16px;
+	margin:0 0 4px 0;
+	font-weight:bold;
+}
+
+p.discuss {
+/*	background:url(http://graphics.suite101.com/icon_discuss.gif) no-repeat 0 2px; */	 
+	padding:0 0 0 20px;
+	margin:0 0 4px 0;
+	font-weight:bold;
+}
+
+p.allDiscussions {
+/*	background:url(http://graphics.suite101.com/icon_discuss_all.gif) no-repeat 0 3px; */
+	padding:2px 0 2px 20px;
+	margin:20px 0 4px 0;
+	font-weight:bold;
+}
+
+p.title {
+	font-weight:bold;
+	margin:0 0 2px 16px;
+}
+
+p.preview, div.preview {
+	margin:0 0 18px 16px;
+}
+
+p.sectionArticleListAuthor {
+	margin:0 0 0 16px;
+}
+
+.blogContent {
+	padding:0 0 0 16px;
+	margin:0;
+}
+
+.limelightContent img,.blogContent object {
+	padding:10px;
+	float:right;
+}
+
+h2.contentDescription {
+	color: rgb(0,131,0); 
+	font-weight:normal;
+}
+
+.rt {
+	float: right;
+	clear: right;
+}
+
+p.rt {
+	margin:0;
+	padding:0;
+}
+
+li {
+	padding-bottom: 4px;
+}
+
+#wrap {
+	width:814px;
+	background:#4E4E4E url(images/bg01.gif) repeat-y center top; 
+	margin:0 auto;
+}
+
+#wrapHome {
+	width:814px;
+	background:#4E4E4E url(images/bg00.gif) repeat-y center top;
+	margin:0 auto;
+}
+
+#footer {
+	width:814px;
+	height:15px;
+	margin:0 auto;
+	background:url(images/bg_footer.gif) no-repeat;
+	clear:left;
+}
+
+#footerHome {
+	width:814px;
+	height:15px;
+	margin:0px auto;
+	background:url(images/bg00_footer.gif) no-repeat; 
+	clear:left;
+}
+
+#footerLinks {
+	width:600px;
+	margin:0 0 0 190px;
+	padding:30px 0 0 10px;
+	text-align:center;
+	clear:both;
+	font-size:11px;
+}
+
+#footerLinks li {
+	display:inline;
+	margin:0 10px 0 10px;
+}
+
+#footerLinks li a {
+	font-weight: normal;
+}
+
+.footerLinks {
+	clear:both;
+	text-align:center;
+}
+.footerLinks a {
+	font-weight:normal;
+	font-size:11px;
+	text-decoration:none;
+}
+.footerBullet {
+	color:#888888;
+	position:relative;
+	top:1px;
+	padding:5px;
+}
+
+#header {
+	width:814px;
+	height:127px;
+	background:url(images/bg_header_01.gif) no-repeat 0 0;
+	background-color: #fff;
+	line-height: 13px;
+}
+
+#headerHome {
+	width:814px;
+	height:100px;
+}
+
+#textHome {
+	width:560px;
+	text-align:center;
+	margin:0 auto;
+	padding:0 0 12px 0;
+}
+
+#aboutUs {
+	float:left;
+	margin:0 0 0 20px;
+	position:relative; 
+	top:-8px;
+}
+
+#siteMap {
+	float:right;
+	margin:0 20px 0 0;
+	text-align:right;
+	position:relative;
+	top:-8px;
+}
+
+#aboutUs a, #siteMap a {
+	font-weight:normal;
+	font-size:11px;
+}
+
+/* shuffle on home page and testimonials page */
+#shuffle table {
+	text-align:center;
+	margin:0 auto;
+}
+
+#homeBox1 {
+	width:230px;
+	float:left;
+	margin:30px 10px 20px 40px;
+	display:inline; /* for double float bug */
+}
+
+#homeBox2 {
+	width:230px;
+	float:left;
+	margin:30px 10px 20px 10px;
+	display:inline; /* for double float bug */
+}
+
+#homeBox3 {
+	width:230px;
+	float:left;
+	margin:30px 16px 20px 10px;
+	display:inline; /* for double float bug */
+}
+
+/* circular images on the home page */
+
+.circle {
+	height:61px;
+	width:61px;
+	float: left;
+	margin:0 6px 0 0;
+	vertical-align:middle;
+	display:inline; /* for double float bug */
+}
+
+/* text next to the circular image on the home page */
+
+.homeBoxText {
+	margin-left:71px;
+}
+
+.sectionBoxText {
+	margin-left:20px;
+}
+
+#sectionsHome {
+	margin:0 auto;
+	width:760px;
+	padding:0 0 20px 0;
+}
+
+table#topics {
+	width:755px;
+	height:303px;
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+table#topics td {
+	width:150px;
+	height:75px;
+	padding:8px;
+	vertical-align:middle;
+}
+
+/* for the FAQ page */
+.faq_question {cursor:pointer; color:#029DFB; font-weight:bold; text-decoration:underline;}
+.faq_answer {display:none; padding:5px 0px 5px 0px;}
+
+/* these are the border styles for the section table on the home page */
+
+table#sections td.B {
+	border-bottom:solid 1px #ADDE26;
+}
+
+table#sections td.R {
+	border-right:solid 1px #ADDE26;
+}
+
+table#sections td.BR {
+	border-bottom:solid 1px #ADDE26;
+	border-right:solid 1px #ADDE26;
+}
+
+table#sections td {
+	width:146px;
+	height:77px;
+	padding:8px 4px 8px 4px;
+	text-align:center;
+	vertical-align:top;
+}
+
+/* logo in the top header */
+
+#logo, #logo_de {
+	display:block;
+	color:#FFFFFF;
+	width:300px;
+	height:100px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	display: inline; /* for double float bug */
+}
+
+#logo span, #logo_de span{
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+} 
+
+#logo span{
+	background: url(images/newlogo.gif) no-repeat 0 0;
+}
+
+a#logo:hover span, a#logo_de:hover span {
+	background-position: 0 -100px;
+	cursor:pointer;
+}
+
+#logoHome, #logoHome_de {
+	display:block;
+	color:#FFFFFF;
+	width:300px;
+	height:100px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	display: inline; /* for double float bug */
+}
+
+#logoHome span, #logoHome_de span{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+} 
+
+#logoHome span{
+	background: url(http://images/newlogo.gif) no-repeat 0 0; overflow:hidden; 
+}
+
+/* sign in link on the home page */
+p#signinLink {
+	font-weight:bold;
+	font-size:11px;
+	margin: 2px 20px 6px 0;
+	clear:right;
+	white-space:nowrap;
+	
+}
+
+/* banner on home page */
+#bannerHome {
+	margin:0; 
+	padding: 1px 25px 2px 0; 
+	clear: right; 
+	float: right; 
+}
+
+#bannerHome img {
+	/* margin: 0 20px 0 0; */
+	
+}
+
+/* home page search box */
+
+div#searchWrap {
+	width:504px;
+	height:38px;
+/*	background:url(http://graphics.suite101.com/bg_search_home.gif) no-repeat 0 0; */
+	margin:10px 0 20px 160px;
+	padding:1px 0 0 16px;
+}
+
+table#searchHome {
+	float:left;
+	margin: 5px 30px 0px 0px;
+	display: inline;
+}
+
+input#searchBoxHome {
+	border: none;
+	border: 0;
+	width: 408px;
+	height: 20px;
+	margin: 0px 3px 0px 0px;
+	background-color: #ffffff;
+	height: 20px;
+	padding:0;
+	border:1px solid #669900;
+}
+
+/* search attributes on other pages */
+
+table#search {
+	float: right;
+	margin: 5px 30px 0px 0px;
+	display: inline;
+}
+
+table#search input#searchButton {
+	width: 56px;
+	height: 20px;
+/*	background:url(http://graphics.suite101.com/button_search.jpg) no-repeat 0 0; */ 
+	margin: 0 3px 0 0;
+}
+
+table#search input#searchBox {
+	border: none;
+	border: 0;
+	width: 228px;  /* was 346 */
+	height: 20px;
+	margin: 0px 3px 0px 0px;
+	background-color: #fff;
+	height: 20px;
+	padding-top: 0px;
+	border:1px solid #669900;
+}
+
+#search {
+	padding-top:1px;
+
+}
+
+table#search a {
+	font-size:9px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-decoration:none;
+	color:#506706;
+}
+
+table#search a:hover {
+	color:#029DFB;
+}
+
+/* table in the poll area */
+
+table.voteTable td {
+	line-height: 160%;
+}
+
+/* banner ad on top */
+
+#bannerAd {
+	height: 60px;
+	width: 470px;
+	float:right;
+	margin:1px 25px 0 0;
+	display: inline; /* for double float bug */
+}
+
+#bannerAdHome {
+	width:470px;
+	height: 60px;
+	position:relative;
+	top:10px;
+	left:116px;
+}
+
+/* login and other links on top right */
+
+p#login {
+	display:inline;
+	padding:6px 25px 4px 0;
+	margin:0;
+	float:right;
+	line-height: 14px;
+	color: #666666;
+	font-size:11px;
+}
+
+#login a {
+	font-weight:bold;
+	font-size:11px;
+}
+
+/* for Left Nav */
+#leftColumn {
+	width:172px;
+	float:left;
+	display:inline; 
+	margin:0 0 0 5px;
+	background:#CCCCCF; /* E1F5AB; */
+}
+
+/* wrapper for the right column */
+
+#rightColumn {
+	width:598px;
+	float:right;
+	margin:0 25px 0 0;
+	display:inline; /* for double float bug */
+}
+
+/* these are the smaller sub columns */
+
+#subColumnLeft {
+	width:292px;
+	float:left;
+	margin:0 0 10px 0;
+}
+
+#subColumnRight {
+	width:292px;
+	float:right;
+	margin:0 0 10px 0;
+}
+
+/* beardcrumb links on top */
+
+#breadcrumb {
+	clear:both;
+	text-align:right;
+	color: #666666;
+	font-size:11px;
+	padding-bottom:5px;
+	/* font-weight: bold; */
+	
+}
+
+#breadcrumb a {
+	 /* font-weight: normal;  */
+}
+
+#breadcrumb span {
+	 font-weight: bold;
+}
+
+#adSet1 p {
+	padding:0;
+	margin:0 0 0 5px;
+}
+
+#adSet1 {
+	float:right;
+	margin:30px 0 10px 10px;
+	display:inline; 
+
+}
+
+.boxRight {
+	padding:2em 0 0 12px;
+}
+
+.boxRight2 {
+	padding:0.9em 0 0 12px;
+}
+
+.boxLeft {
+	padding:0.2em 0 0 17px;
+}
+
+.inline {
+	display:inline; /* for double float bug */
+}
+
+.g_ad_topSpacer {
+	padding-top:1.3em;
+}
+
+.g_ad_bottomSpacer_small {
+	padding-bottom:8px;
+
+}
+
+/* this is the green box with the contact info on the about us page */
+
+#contactBox {
+	float:right;
+	width:260px;
+	margin:30px 0 10px 10px;
+	padding:20px;
+	display:inline; /* for double float bug */
+	background-color: #ECF8CD;
+}
+
+/* for the staff photo and name */
+
+.staffInfoLeft, .staffInfoRight {
+	float:left;
+	width:260px;
+}
+
+.staffInfoLeft {
+	margin:10px 10px 10px 0;
+}
+
+.staffInfoRight {
+	margin:10px 0 10px 0;
+}
+
+/* this container holds the staff photos and text on the left */
+
+#staffColumn1 {
+	width:290px;
+	float:left;
+}
+
+#staffColumn2 {
+	width:290px;
+	float:right;
+	margin-top:7px;
+}
+
+#editorColumn1 {
+	width:290px;
+	float:left;
+}
+
+#editorColumn2 {
+	width:290px;
+	float:right;
+}
+
+#boardColumn1 {
+	width:290px;
+	float:left;
+}
+
+#boardColumn2 {
+	width:290px;
+	float:right;
+}
+
+/* headings ********************************************************************/
+
+#leftColumn h2, #lessons h2 {
+	font-size:1px; /* ie leaves the default height of the h1 tag without this */
+	margin:0;
+	padding:0;
+	text-indent:-9999px;
+}
+
+#rightColumn h2 {
+	margin:0;
+	padding:0;
+}
+
+#rightColumn h5, #rightColumn2 h5 {
+	font-size:12px; 
+	margin:0;
+	padding:0;
+	width:228px;
+	height:22px;
+	padding:34px 0 0 64px;
+}
+
+/* this is for the heading buttons in the main navigation */
+
+#leftColumn h2 a {
+	text-decoration:none;
+	display:block;
+}
+
+#leftColumn ul {
+	margin:8px 0 0 0;
+	padding:0 0 8px 0;
+}
+
+/* main page titles with no green background, with a floated image and author's name */
+
+#pageTitle {
+	margin-bottom:10px;
+}
+
+#pageTitle h1 {
+	font-size:160%;
+	font-weight:normal;
+	display:inline;
+	padding-right:5px;
+}
+
+#pageTitle a {
+	padding: 0;
+	/*white-space:nowrap;*/
+}
+
+#pageTitle h2 img {
+	vertical-align:middle;
+}
+
+/* regular page headings without images or text beside it */
+
+#rightColumn h5 {
+	font-size:1px; /* ie leaves the default height of the h1 tag without this */
+	margin:0 0 10px 0;
+	padding:0;
+}
+
+#leftColumn span a {
+	width:172px;
+	height:26px;
+	display:block;
+}
+
+#leftColumn span a:hover {
+	background-position:0 -26px !important;
+}
+
+.closed ul {
+	display: none;
+}
+
+
+/* these are the styles within the lessons box */
+
+#lessons {
+	margin:0 0 0 10px;
+	width:250px;
+	background:#E8F7C1;
+}
+
+#lessons h2 a {
+	text-decoration:none;
+	display:block;
+}
+
+#lessons h2 a {
+	width:250px;
+	height:26px;
+}
+
+#lessons h2 a:hover {
+	background-position:0 -26px !important;
+}
+
+#lessons ul {
+	padding:10px;
+	list-style:none;
+}
+
+#lessons ul ul {
+	padding:0;
+}
+
+#lessons li {
+	padding: 0 0 6px 16px;
+/*	background:url(http://graphics.suite101.com/icon_article.gif) no-repeat 0 2px; */
+}
+
+#lessons li li {
+/*	background:url(http://graphics.suite101.com/bullet_arrow_right.gif) no-repeat 0 8px; */
+	padding: 2px 0 2px 10px;
+}
+
+.lessonBox {
+	border-top:solid 1px #fff;
+}
+
+/* COLUMN HEADINGS */
+div.column_heading_article, div.column_heading_article_wide, div.column_heading_blog, div.column_heading_discussion,
+div.column_heading_poll, div.column_heading_writer, div.column_heading_section
+								{background-color:#E1F5AB; width:292px; height:60px; margin:30px 0 5px 0; text-decoration:none; cursor:pointer;}
+div.column_heading_article		{background:url(http://graphics.suite101.com/heading_article.gif) no-repeat 0 0;}
+div.column_heading_article_wide	{background:url(http://graphics.suite101.com/heading_article_wide.gif) no-repeat 0 0; width:598px;}
+div.column_heading_blog			{background:url(http://graphics.suite101.com/heading_blog.gif) no-repeat 0 0;}
+div.column_heading_discussion	{background:url(http://graphics.suite101.com/heading_discussion.gif) no-repeat 0 0;}
+div.column_heading_poll			{background:url(http://graphics.suite101.com/heading_poll.gif) no-repeat 0 0;}
+div.column_heading_writer		{background:url(http://graphics.suite101.com/heading_writer.gif) no-repeat 0 0;}
+div.column_heading_title		{padding:8px 0 0 63px; font-size:21px; font-weight:normal; color:#65820c;}
+div.column_heading_subtitle		{padding:0 0 0 63px; font-size:12px; font-weight:bold; color:#444444;}
+
+/* Section heading for daily page */
+.t_section_heading {
+	background-color:#E1F5AB;
+	height:56px;
+	width:292px;
+}
+
+.CodeSample {
+	font-family: courier;
+	margin:20px;
+}
+
+.hrDivider1, .hrDivider3 { /* used on new world discussion page */
+	margin: 2px 0 2px 0 ;
+	border-bottom: 2px solid #AAAAAA;
+	height: 1px;
+}
+
+.hrDivider2 { /* used on new world discussion page - with signature */
+	border-bottom: 1px solid #D3D3D3;
+	height: 1px;
+}
+
+.hrDivider3 { /* used on mysuite forms */
+	margin:24px 0 14px 0;
+}
+
+.hrDivider1 hr, .hrDivider2 hr, .hrDivider3 hr {
+	display: none;
+}
+
+
+.ele_element { /* used on topcilist article page */
+	clear:both;
+	padding-bottom:3px;
+}
+
+.ele_icon {
+	float:left;
+	padding-top:3px;
+	width:20px;
+}
+
+.ele_text {
+	float:left;
+}
+
+.ele_element, a.ele_text{
+	text-decoration:underline;
+} 
+
+.ele_date { 
+	clear:left;
+}
+
+.ele_date .date {
+	width:7em;
+	float:left;
+	padding-bottom:2px;
+	text-decoration:none;
+}
+
+.ele_date .date_value {
+	padding-bottom:2px;
+	float:left;
+	width:17em;
+	text-decoration:none;
+}
+
+.ad_div {
+	text-align:left; 
+	padding-bottom:0.9em;
+}
+
+.element_width_01 {
+	width: 550px ;
+}
+
+.float_left {
+	float:left;
+}
+.float_right {
+	float:right;
+}
+
+.clear_both {
+	clear:both;
+}
+
+.clear_right {
+	clear:right;
+}
+
+.clear_left {
+	clear:left;
+}
+
+.hidden {
+	visibility:hidden;
+	display:none
+}
+
+.grnbox {
+	 border:1px solid #9bcc14;
+	 padding:5px;
+	 text-align:left !important;
+}
+
+.grnboxfloatright {
+	float:right; 
+	width:336px; 
+	display:inline; 
+	margin:10px 0px 10px 20px; 
+	padding:0px;
+}
+
+.grnboxtitle {
+	background-color:#9bcc14;
+	margin:0px;
+	padding:0px 10px 2px 10px;
+	color:#ffffff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+
+.grnboxtext {
+	padding: 5px;
+}
+
+.grnboxHome {
+	width:750px !important; 
+	text-align:left;
+}
+
+.grnboxRightColumn {
+	float:right; 
+	display: inline;
+	width:190px; 
+	padding-left:10px;
+}
+
+.grnboxLeftColumn {
+	width:550px;
+	text-align:left;
+}
+
+.marked {
+	 text-decoration:line-through; 
+	 color:#AAAAAA
+}
+
+.limeTitle {
+	font-family:arial;
+	font-weight:normal;
+	padding-bottom:5px;
+}
+
+h1 div.limeTitle {
+	font-size:20pt;
+	color:#617F00;
+}
+
+h2 div.limeTitle {
+	font-size:15pt;
+	color:#85A904;
+}

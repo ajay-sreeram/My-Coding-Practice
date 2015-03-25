@@ -1,0 +1,55 @@
+/* ACP */
+
+h1.ACP, h2.ACP		{font-family:arial; font-weight:normal; padding-bottom:5px;}
+h1.ACP				{font-size:20pt; color:#617F00;}
+h2.ACP				{font-size:14pt; color:#85A904;}
+
+hr.ACP				{border:0px; color:#DDDDDD; background-color:#CCCCCC; height:1px; margin-bottom:10px;}
+a.ACP 				{text-decoration:none;}
+ul.ACP				{padding:0px;}
+li.ACP				{padding:0px; margin-left:10px;}
+
+.ACP_long, .ACP_medium, .ACP_short
+					{border:1px solid #6699ff; padding:1px; color:#333333; margin-top:1px;}
+.ACP_long			{width:97%;}
+.ACP_medium			{width:400px;}
+.ACP_short			{width:200px;}
+textarea.ACP		{border:1px solid #6699ff; padding:0px 0px 0px 3px; margin-top:2px; width:99%; height:125px; color:#333333;}
+select.ACP			{border:1px solid #6699ff; padding:0px; margin-top:2px;}
+
+input.button		{background-color:#ADDE26; border-bottom:2px solid #447700; border-right:2px solid #447700; border-top:2px solid #E1F5AB; border-left:2px solid #E1F5AB; padding:0px 7px 0px 7px; font-weight:normal; font-size:13px; color:#000000;}
+input.button:active	{border-top:2px solid #558800; border-left:2px solid #558800; border-bottom:2px solid #81954B; border-right:2px solid #81954B; padding:0px 6px 0px 8px;}
+div.ACP_buttons		{margin-top:10px; text-align:left; padding-top:10px; border-top:1px solid #CCCCCC}
+
+table.ACP			{border-collapse:collapse; width:100%;}
+td.ACP				{padding:3px 5px 3px 5px;}
+th.ACP_silver		{text-align:left;}
+th.ACP_silver:hover	{background-color:#DDDDDD; cursor:pointer;}
+th.ACP_silver_over:hover	{background-color:#DDDDDD; cursor:pointer;}
+th.ACP_blue			{text-align:left; font-size:14px;}
+
+.ACP_white, .ACP_white_over, .ACP_silver, .ACP_silver_over, .ACP_red, .ACP_red_over, .ACP_blue, .ACP_blue_over, .ACP_violet, .ACP_violet_over, .ACP_yellow, .ACP_yellow_over, .ACP_green, .ACP_green_over
+					{border:1px solid #CCCCCC; padding:5px 5px 4px 5px; background-color:#FFFFFF; color:#333333;}
+.ACP_white			{background-color:#FFFFFF; color:#333333;}
+.ACP_white_over		{background-color:#F4F4F4; color:#444444;}
+.ACP_silver			{background-color:#EEEEEE; color:#333333;}
+.ACP_silver_over	{background-color:#DDDDDD; color:#000000;}
+.ACP_red			{background-color:#FFEEEE; color:#333333;}
+.ACP_red_over		{background-color:#EE9999; color:#000000;}
+.ACP_blue			{background-color:#EEEEFF; color:#333333;}
+.ACP_blue_over		{background-color:#9999EE; color:#000000;}
+.ACP_green			{background-color:#E1F5AB; color:#333333;}
+.ACP_green_over		{background-color:#ADDE26; color:#000000;}
+.ACP_violet			{background-color:#CECEFF; color:#333333;}
+.ACP_yellow			{background-color:#FAFAD2; color:#333344;}
+.ACP_violet_over		{background-color:#AD26DE; color:#000000;}
+.ACP_yellow_over		{background-color:#CECEFF; color:#000000;}
+tr.ACP_white:hover	{background-color:#F4F4F4;}
+tr.ACP_silver:hover	{background-color:#DDDDDD;}
+tr.ACP_red:hover	{background-color:#EE9999;}
+tr.ACP_blue:hover	{background-color:#9999EE;}
+tr.ACP_green:hover	{background-color:#AADD44;}
+tr.ACP_violet:hover	{background-color:#AA44DD;}
+tr.ACP_yellow:hover	{background-color:#A0A0E0;}
+
+img.help			{cursor:pointer; float:right;}

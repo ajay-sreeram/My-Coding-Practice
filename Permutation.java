@@ -6,7 +6,7 @@ public class Permutation {
 		perm(arr,0);
 	}
 	public static void perm(int arr[],int i){
-		if(i==arr.length-1){
+		if(i==arr.length-2){
 			System.out.println(Arrays.toString(arr));
 			return;
 		}
